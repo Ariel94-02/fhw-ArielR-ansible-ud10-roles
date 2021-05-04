@@ -1,0 +1,11 @@
+---
+#playbook principal de la actividad
+- name: roles principal
+  hosts: webservers
+  become: yes
+  roles:
+    - role: envprep
+    - role: nginx
+    - role: deployhtml
+
+...
