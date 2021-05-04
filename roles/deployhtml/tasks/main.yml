@@ -1,0 +1,11 @@
+---
+#copiar un fichero combiando el nombre ls
+  - name: copiar ficheros HTML
+    copy: 
+      src: /home/vagrant/ud10-roles/index-{{ env }}.html
+      dest: /var/www/html/index.html
+      owner: www-data
+      group: www-data
+    notify: 
+      - reiniciar nginx
+...
